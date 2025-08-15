@@ -3,7 +3,7 @@ process BLASTN {
     label 'process_low'
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'biocontainers/blast:2.15.0--pl5321h6f7f691_1':
+        'https://depot.galaxyproject.org/singularity/blast:2.15.0--pl5321h6f7f691_1':
         'biocontainers/blast:2.15.0--pl5321h6f7f691_1' }"
 
     input:

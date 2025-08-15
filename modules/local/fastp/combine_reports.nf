@@ -1,7 +1,7 @@
 process COMBINE_FASTP_REPORTS {
     label 'process_low'
 
-    container "centos:7.9.2009"
+    container "https://depot.galaxyproject.org/singularity/centos:7.9.2009"
 
     input:
     path(tsv_paths)
@@ -20,7 +20,7 @@ process COMBINE_FASTP_REPORTS {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        "Awk": \$(awk --version 2>&1 | sed -n 1p | sed 's/GNU Awk //; s/,.*\$//')
+        Awk: \$(awk --version 2>&1 | sed -n 1p | sed 's/GNU Awk //')
     END_VERSIONS
     """
 }

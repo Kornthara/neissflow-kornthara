@@ -1,5 +1,6 @@
 work/
 assets/
+NG_Bangruk_Run1_Fastq/
 
 full_collection_bp/
 # snakemake

@@ -1,7 +1,7 @@
 process REMOVE_REF {
     label 'process_low_memory'
 
-    container "centos:7.9.2009"
+    container "https://depot.galaxyproject.org/singularity/centos:7.9.2009"
 
     input:
     path(clean_full_aln)

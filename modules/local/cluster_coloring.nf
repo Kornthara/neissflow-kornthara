@@ -1,7 +1,7 @@
 process CLUSTER_COLORING {
     label 'process_single'
 
-    container "centos:7.9.2009"
+    container "https://depot.galaxyproject.org/singularity/centos:7.9.2009"
 
     input:
     path(clusters)

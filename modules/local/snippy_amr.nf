@@ -4,7 +4,7 @@ process SNIPPY_AMR {
     tag "$sample_name"
     label 'process_medium'
 
-    container "https://depot.galaxyproject.org/singularity/snippy%3A4.6.0--0"
+    container "https://depot.galaxyproject.org/singularity/snippy:4.6.0--0"
     
     input:
     tuple val(sample_name), path(fastq_paths)

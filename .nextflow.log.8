@@ -1,233 +1,28 @@
-Aug-14 13:44:17.513 [main] DEBUG nextflow.cli.Launcher - $> nextflow run . -profile local --input /home/kornthara/neissflow-kornthara/NG_Bangruk_Run1_Fastq/illumina_pairs.csv --outdir /home/kornthara/neissflow-kornthara/NG_Bangruk_Run1_Fastq/illumina_pairs.csv/results --only_fastq
-Aug-14 13:44:17.585 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
-Aug-14 13:44:17.605 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/kornthara/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
-Aug-14 13:44:17.622 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Aug-14 13:44:17.623 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Aug-14 13:44:17.625 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Aug-14 13:44:17.632 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Aug-14 13:44:18.229 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/kornthara/neissflow-kornthara/nextflow.config
-Aug-14 13:44:18.230 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kornthara/neissflow-kornthara/nextflow.config
-Aug-14 13:44:18.244 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/kornthara/.nextflow/secrets/store.json
-Aug-14 13:44:18.247 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3ed34ef5] - activable => nextflow.secret.LocalSecretsProvider@3ed34ef5
-Aug-14 13:44:18.255 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `local`
-Aug-14 13:44:18.764 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [all, test_fasta, highmem, QC, debug, test, short, singularity, test_both, local]
-Aug-14 13:44:18.790 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
-Aug-14 13:44:18.809 [main] DEBUG nextflow.cli.CmdRun - Launching `./main.nf` [suspicious_church] DSL2 - revision: 93f13dad4b
-Aug-14 13:44:18.810 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Aug-14 13:44:18.811 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Aug-14 13:44:18.859 [main] DEBUG nextflow.Session - Session UUID: 8741c30d-ee9a-4541-aa8f-751f538fc9c5
-Aug-14 13:44:18.859 [main] DEBUG nextflow.Session - Run name: suspicious_church
-Aug-14 13:44:18.859 [main] DEBUG nextflow.Session - Executor pool size: 22
-Aug-14 13:44:18.865 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Aug-14 13:44:18.870 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=66; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Aug-14 13:44:18.891 [main] DEBUG nextflow.cli.CmdRun - 
-  Version: 25.04.6 build 5954
-  Created: 01-07-2025 11:27 UTC (18:27 ICST)
-  System: Linux 6.14.0-27-generic
-  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.16+8-Ubuntu-0ubuntu124.04.1
-  Encoding: UTF-8 (UTF-8)
-  Process: 12067@stealth-16-mercedesamg-a1vgg [130.130.2.214]
-  CPUs: 22 - Mem: 62.3 GB (26.4 GB) - Swap: 8 GB (8 GB)
-Aug-14 13:44:18.909 [main] DEBUG nextflow.Session - Work-dir: /home/kornthara/neissflow-kornthara/work [ext2/ext3]
-Aug-14 13:44:18.930 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Aug-14 13:44:18.938 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Aug-14 13:44:18.951 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
-Aug-14 13:44:18.965 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Aug-14 13:44:18.971 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 23; maxThreads: 1000
-Aug-14 13:44:19.016 [main] DEBUG nextflow.Session - Session start
-Aug-14 13:44:19.019 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/kornthara/neissflow-kornthara/NG_Bangruk_Run1_Fastq/illumina_pairs.csv/results/trace.txt
-Aug-14 13:44:19.019 [main] DEBUG nextflow.Session - /home/kornthara/neissflow-kornthara/NG_Bangruk_Run1_Fastq/illumina_pairs.csv/results: Not a directory
-java.nio.file.FileSystemException: /home/kornthara/neissflow-kornthara/NG_Bangruk_Run1_Fastq/illumina_pairs.csv/results: Not a directory
-	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:100)
-	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
-	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
-	at java.base/sun.nio.fs.UnixFileSystemProvider.createDirectory(UnixFileSystemProvider.java:397)
-	at java.base/java.nio.file.Files.createDirectory(Files.java:700)
-	at java.base/java.nio.file.Files.createAndCheckIsDirectory(Files.java:807)
-	at java.base/java.nio.file.Files.createDirectories(Files.java:793)
-	at nextflow.trace.TraceFileObserver.onFlowCreate(TraceFileObserver.groovy:203)
-	at nextflow.Session$_notifyFlowCreate_lambda40.doCall(Session.groovy:1093)
-	at nextflow.Session.notifyEvent(Session.groovy:1138)
-	at nextflow.Session.notifyFlowCreate(Session.groovy:1093)
-	at nextflow.Session.start(Session.groovy:585)
-	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:133)
-	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
+Aug-15 03:57:12.996 [main] DEBUG nextflow.cli.Launcher - $> nextflow run . -profile local --input /home/kornthara/NG_Bangruk_Run1_Fastq/illumina_pairs.csv --outdir /home/kornthara/neissflow-kornthara/NG_Bangruk_Run1_Fastq/results --only_fastq -resume
+Aug-15 03:57:13.067 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Aug-15 03:57:13.089 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/kornthara/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Aug-15 03:57:13.103 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-15 03:57:13.103 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-15 03:57:13.105 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Aug-15 03:57:13.113 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-15 03:57:13.675 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/kornthara/neissflow-kornthara/nextflow.config
+Aug-15 03:57:13.678 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kornthara/neissflow-kornthara/nextflow.config
+Aug-15 03:57:13.698 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/kornthara/.nextflow/secrets/store.json
+Aug-15 03:57:13.700 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@27fe9713] - activable => nextflow.secret.LocalSecretsProvider@27fe9713
+Aug-15 03:57:13.708 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `local`
+Aug-15 03:57:14.131 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [all, test_fasta, highmem, QC, debug, test, short, singularity, test_both]
+Aug-15 03:57:14.146 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+nextflow.exception.AbortOperationException: Unknown configuration profile: 'local'
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.config.ConfigBuilder.checkValidProfile(ConfigBuilder.groovy:511)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.config.ConfigBuilder.buildConfig0(ConfigBuilder.groovy:386)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.config.ConfigBuilder.buildGivenFiles(ConfigBuilder.groovy:318)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.config.ConfigBuilder.buildConfigObject(ConfigBuilder.groovy:816)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.config.ConfigBuilder.build(ConfigBuilder.groovy:829)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:333)
 	at nextflow.cli.Launcher.run(Launcher.groovy:513)
 	at nextflow.cli.Launcher.main(Launcher.groovy:673)
-Aug-14 13:44:19.157 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Aug-14 13:44:19.890 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: latest
-Aug-14 13:44:20.523 [main] DEBUG nextflow.plugin.PluginUpdater - Plugin nf-validation version null resolved to: 1.1.4
-Aug-14 13:44:20.527 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.4' resolved
-Aug-14 13:44:20.527 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.4'
-Aug-14 13:44:20.533 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.4
-Aug-14 13:44:20.534 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
-Aug-14 13:44:20.683 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsHelp:paramsHelp]; plugin Id: nf-validation
-Aug-14 13:44:20.683 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-validation
-Aug-14 13:44:20.684 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-validation
-Aug-14 13:44:20.686 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
-Aug-14 13:44:20.687 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [fromSamplesheet:fromSamplesheet]; plugin Id: nf-validation
-Aug-14 13:44:20.904 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
-  Script_35b50fd5670597b8: /home/kornthara/neissflow-kornthara/modules/local/snippy.nf
-  Script_b46a7490731f48c6: /home/kornthara/neissflow-kornthara/subworkflows/nf-core/utils_nfcore_pipeline/main.nf
-  Script_228dd5752694ad41: /home/kornthara/neissflow-kornthara/subworkflows/local/utils_nfcore_neissflow_pipeline/main.nf
-  Script_50f4407a33830ac6: /home/kornthara/neissflow-kornthara/modules/nf-core/multiqc/main.nf
-  Script_ec1fe5e58cfe9c00: /home/kornthara/neissflow-kornthara/modules/local/merge/merge.nf
-  Script_13defc9c09aa2789: /home/kornthara/neissflow-kornthara/modules/local/fastp/fastp.nf
-  Script_4db33163bf5e1960: /home/kornthara/neissflow-kornthara/modules/local/qc_check/qc_check.nf
-  Script_063d4aa3571d67c4: /home/kornthara/neissflow-kornthara/subworkflows/local/preprocessing.nf
-  Script_b691b9ae3f2e1f32: /home/kornthara/neissflow-kornthara/workflows/neissflow.nf
-  Script_34a6e65ee7dbdbe0: /home/kornthara/neissflow-kornthara/subworkflows/nf-core/utils_nextflow_pipeline/main.nf
-  Script_767f800d4dcf57d3: /home/kornthara/neissflow-kornthara/main.nf
-  Script_a7d371fe23db7aab: /home/kornthara/neissflow-kornthara/subworkflows/nf-core/utils_nfvalidation_plugin/main.nf
-  Script_c9590eca8fd9e337: /home/kornthara/neissflow-kornthara/modules/local/fastp/parse_fastp.nf
-  Script_b5147d15f6697044: /home/kornthara/neissflow-kornthara/modules/local/check_fastqs.nf
-  Script_2e8b63203ad4b51b: /home/kornthara/neissflow-kornthara/modules/local/qc_check/initial_merge.nf
-Aug-14 13:44:20.919 [main] ERROR nextflow.cli.Launcher - Module compilation error
-- file : /home/kornthara/neissflow-kornthara/modules/local/fastp/combine_reports.nf
-- cause: token recognition error at: '/' @ line 23, column 77.
-   1p | sed 's/GNU Awk //; s/,.*$//')
-                                 ^
-
-1 error
-
-nextflow.exception.ScriptCompilationException: Module compilation error
-- file : /home/kornthara/neissflow-kornthara/modules/local/fastp/combine_reports.nf
-- cause: token recognition error at: '/' @ line 23, column 77.
-   1p | sed 's/GNU Awk //; s/,.*$//')
-                                 ^
-
-1 error
-
-	at nextflow.script.parser.v1.ScriptLoaderV1.parse0(ScriptLoaderV1.groovy:204)
-	at nextflow.script.parser.v1.ScriptLoaderV1.parse(ScriptLoaderV1.groovy:215)
-	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:230)
-	at nextflow.script.IncludeDef.memoizedMethodPriv$loadModuleV1PathMapSession(IncludeDef.groovy:166)
-	at nextflow.script.IncludeDef.access$1(IncludeDef.groovy)
-	at nextflow.script.IncludeDef$__clinit__closure3.doCall(IncludeDef.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.lambda$call$0(Memoize.java:137)
-	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:137)
-	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:113)
-	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:136)
-	at nextflow.script.IncludeDef.loadModuleV1(IncludeDef.groovy)
-	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:113)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at Script_063d4aa3571d67c4.runScript(Script_063d4aa3571d67c4:6)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.script.BaseScript.run0(BaseScript.groovy:159)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.script.BaseScript.run(BaseScript.groovy:193)
-	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:246)
-	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:231)
-	at nextflow.script.IncludeDef.memoizedMethodPriv$loadModuleV1PathMapSession(IncludeDef.groovy:166)
-	at nextflow.script.IncludeDef.access$1(IncludeDef.groovy)
-	at nextflow.script.IncludeDef$__clinit__closure3.doCall(IncludeDef.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.lambda$call$0(Memoize.java:137)
-	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:137)
-	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:113)
-	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:136)
-	at nextflow.script.IncludeDef.loadModuleV1(IncludeDef.groovy)
-	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:113)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at Script_b691b9ae3f2e1f32.runScript(Script_b691b9ae3f2e1f32:26)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.script.BaseScript.run0(BaseScript.groovy:159)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.script.BaseScript.run(BaseScript.groovy:193)
-	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:246)
-	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:231)
-	at nextflow.script.IncludeDef.memoizedMethodPriv$loadModuleV1PathMapSession(IncludeDef.groovy:166)
-	at nextflow.script.IncludeDef.access$1(IncludeDef.groovy)
-	at nextflow.script.IncludeDef$__clinit__closure3.doCall(IncludeDef.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.lambda$call$0(Memoize.java:137)
-	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:137)
-	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:113)
-	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:136)
-	at nextflow.script.IncludeDef.loadModuleV1(IncludeDef.groovy)
-	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:113)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at Script_767f800d4dcf57d3.runScript(Script_767f800d4dcf57d3:20)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.script.BaseScript.run0(BaseScript.groovy:159)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.script.BaseScript.run(BaseScript.groovy:193)
-	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:246)
-	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy)
-	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:246)
-	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:139)
-	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
-	at nextflow.cli.Launcher.run(Launcher.groovy:513)
-	at nextflow.cli.Launcher.main(Launcher.groovy:673)
-Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-Script_839fd7bc5e05d422: 23: token recognition error at: '/' @ line 23, column 77.
-   1p | sed 's/GNU Awk //; s/,.*$//')
-                                 ^
-
-1 error
-
-	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:292)
-	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:148)
-	at org.apache.groovy.parser.antlr4.AstBuilder.collectSyntaxError(AstBuilder.java:4730)
-	at org.apache.groovy.parser.antlr4.AstBuilder.access$100(AstBuilder.java:169)
-	at org.apache.groovy.parser.antlr4.AstBuilder$3.syntaxError(AstBuilder.java:4741)
-	at groovyjarjarantlr4.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:44)
-	at groovyjarjarantlr4.v4.runtime.Lexer.notifyListeners(Lexer.java:381)
-	at groovyjarjarantlr4.v4.runtime.Lexer.nextToken(Lexer.java:145)
-	at groovyjarjarantlr4.v4.runtime.BufferedTokenStream.fetch(BufferedTokenStream.java:170)
-	at groovyjarjarantlr4.v4.runtime.BufferedTokenStream.sync(BufferedTokenStream.java:153)
-	at groovyjarjarantlr4.v4.runtime.BufferedTokenStream.consume(BufferedTokenStream.java:137)
-	at groovyjarjarantlr4.v4.runtime.atn.ParserATNSimulator.execDFA(ParserATNSimulator.java:559)
-	at groovyjarjarantlr4.v4.runtime.atn.ParserATNSimulator.adaptivePredict(ParserATNSimulator.java:408)
-	at groovyjarjarantlr4.v4.runtime.atn.ParserATNSimulator.adaptivePredict(ParserATNSimulator.java:356)
-	at org.apache.groovy.parser.antlr4.GroovyParser.commandExpression(GroovyParser.java:9702)
-	at org.apache.groovy.parser.antlr4.GroovyParser.statementExpression(GroovyParser.java:8233)
-	at org.apache.groovy.parser.antlr4.GroovyParser.statement(GroovyParser.java:7078)
-	at org.apache.groovy.parser.antlr4.GroovyParser.scriptStatement(GroovyParser.java:517)
-	at org.apache.groovy.parser.antlr4.GroovyParser.scriptStatements(GroovyParser.java:416)
-	at org.apache.groovy.parser.antlr4.GroovyParser.compilationUnit(GroovyParser.java:363)
-	at org.apache.groovy.parser.antlr4.AstBuilder.buildCST(AstBuilder.java:243)
-	at org.apache.groovy.parser.antlr4.AstBuilder.buildCST(AstBuilder.java:221)
-	at org.apache.groovy.parser.antlr4.AstBuilder.buildAST(AstBuilder.java:262)
-	at org.apache.groovy.parser.antlr4.Antlr4ParserPlugin.buildAST(Antlr4ParserPlugin.java:58)
-	at org.codehaus.groovy.control.SourceUnit.buildAST(SourceUnit.java:256)
-	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:663)
-	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:365)
-	at groovy.lang.GroovyClassLoader.lambda$parseClass$2(GroovyClassLoader.java:314)
-	at org.codehaus.groovy.runtime.memoize.StampedCommonCache.compute(StampedCommonCache.java:163)
-	at org.codehaus.groovy.runtime.memoize.StampedCommonCache.getAndPut(StampedCommonCache.java:154)
-	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:314)
-	at groovy.lang.GroovyShell.parseClass(GroovyShell.java:572)
-	at groovy.lang.GroovyShell.parse(GroovyShell.java:585)
-	at groovy.lang.GroovyShell.parse(GroovyShell.java:639)
-	at groovy.lang.GroovyShell.parse(GroovyShell.java:643)
-	at nextflow.script.parser.v1.ScriptLoaderV1.parse0(ScriptLoaderV1.groovy:183)
-	... 85 common frames omitted

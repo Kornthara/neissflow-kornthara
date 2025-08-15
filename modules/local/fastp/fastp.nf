@@ -3,7 +3,7 @@ process FASTP {
     label 'process_medium'
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/fastp%3A0.23.4--hadf994f_2' :
+        'https://depot.galaxyproject.org/singularity/fastp:0.23.4--hadf994f_2' :
         'quay.io/biocontainers/fastp:0.23.4--hadf994f_2' }"
 
     input:

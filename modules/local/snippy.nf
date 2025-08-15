@@ -2,7 +2,7 @@ process SNIPPY {
     tag "$sample_name"
     label 'process_medium'
 
-    container "https://depot.galaxyproject.org/singularity/snippy%3A4.6.0--0"
+    container "https://depot.galaxyproject.org/singularity/snippy:4.6.0--0"
     
     input:
     tuple val(sample_name), file(input)
@@ -41,6 +41,10 @@ process SNIPPY {
         filename=$ref
         outdir="\${filename%.*}"
 
+        # Set TMPDIR if not defined
+        export TMPDIR=\${TMPDIR:-\$PWD/tmp}
+        mkdir -p \$TMPDIR
+        
         snippy --cpus ${task.cpus} --prefix $sample_name --outdir \${outdir}/$sample_name --ref $ref --R1 $read_1 --R2 $read_2 --tmpdir \$TMPDIR --minfrac 0.9 --basequal 20
 
         cat <<-END_VERSIONS > versions.yml

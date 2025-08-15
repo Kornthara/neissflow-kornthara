@@ -20,7 +20,7 @@ process ASSEMBLY_STATS {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        "Python": \$(python --version 2>&1 | sed 's/Python //;')
+        Python: \$(python --version 2>&1 | sed 's/Python //;')
     END_VERSIONS
     """
 }
