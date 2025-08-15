@@ -1,17 +1,17 @@
-Aug-15 04:20:36.038 [main] DEBUG nextflow.cli.Launcher - $> nextflow run . -profile local --input /home/kornthara/neissflow-kornthara/NG_Bangruk_Run1_Fastq/illumina_pairs.csv --outdir /home/kornthara/neissflow-kornthara/NG_Bangruk_Run1_Fastq/results --only_fastq -resume
-Aug-15 04:20:36.102 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
-Aug-15 04:20:36.122 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/kornthara/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
-Aug-15 04:20:36.136 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Aug-15 04:20:36.136 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Aug-15 04:20:36.138 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Aug-15 04:20:36.147 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Aug-15 04:20:36.690 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/kornthara/neissflow-kornthara/nextflow.config
-Aug-15 04:20:36.691 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kornthara/neissflow-kornthara/nextflow.config
-Aug-15 04:20:36.701 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/kornthara/.nextflow/secrets/store.json
-Aug-15 04:20:36.703 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@27fe9713] - activable => nextflow.secret.LocalSecretsProvider@27fe9713
-Aug-15 04:20:36.709 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `local`
-Aug-15 04:20:37.097 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [all, test_fasta, highmem, QC, debug, test, short, singularity, test_both]
-Aug-15 04:20:37.107 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+Aug-15 13:57:21.697 [main] DEBUG nextflow.cli.Launcher - $> nextflow run . -profile local,singularity --input /home/kornthara/neissflow-kornthara/NG_Bangruk_Run1_Fastq/illumina_pairs.csv --outdir /home/kornthara/neissflow-kornthara/NG_Bangruk_Run1_Fastq/results --only_fastq -resume
+Aug-15 13:57:21.786 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Aug-15 13:57:21.808 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/kornthara/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Aug-15 13:57:21.827 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-15 13:57:21.828 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-15 13:57:21.830 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Aug-15 13:57:21.839 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-15 13:57:22.461 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/kornthara/neissflow-kornthara/nextflow.config
+Aug-15 13:57:22.462 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kornthara/neissflow-kornthara/nextflow.config
+Aug-15 13:57:22.478 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/kornthara/.nextflow/secrets/store.json
+Aug-15 13:57:22.481 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@2aaf152b] - activable => nextflow.secret.LocalSecretsProvider@2aaf152b
+Aug-15 13:57:22.494 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `local,singularity`
+Aug-15 13:57:22.996 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [all, test_fasta, highmem, QC, debug, test, short, singularity, test_both]
+Aug-15 13:57:23.008 [main] DEBUG nextflow.cli.Launcher - Operation aborted
 nextflow.exception.AbortOperationException: Unknown configuration profile: 'local'
 	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
 	at nextflow.config.ConfigBuilder.checkValidProfile(ConfigBuilder.groovy:511)

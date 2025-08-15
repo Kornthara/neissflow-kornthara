@@ -43,7 +43,7 @@ process CHECK_FASTQS {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        Awk: \$(awk --version 2>&1 | sed -n 1p | sed 's/GNU Awk //')
+        Awk: \$(awk 'BEGIN{print PROCINFO["version"]}' 2>/dev/null || echo "unknown")
     END_VERSIONS
 
     """
